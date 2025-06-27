@@ -1,0 +1,6 @@
+*.env
+.backup
+.test
+.keys
+[Mm]akefile
+doc
