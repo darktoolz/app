@@ -17,7 +17,8 @@ RUN apt-get update -y && \
   gnupg \
   binutils \
 	locales \
-  maven
+  maven \
+  gettext-base
 
 RUN update-java-alternatives -s java-1.11.0-openjdk-amd64
 RUN mkdir -p /root/app /tmp/.X11-unix
