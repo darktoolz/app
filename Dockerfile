@@ -16,7 +16,8 @@ RUN apt-get update -y && \
   iproute2 \
   gnupg \
   binutils \
-	locales
+	locales \
+  maven
 
 RUN update-java-alternatives -s java-1.11.0-openjdk-amd64
 RUN mkdir -p /root/app /tmp/.X11-unix
@@ -41,5 +42,5 @@ ENV http_proxy= \
     SSH_CLIENT=
 
 WORKDIR /root/app
-EXPOSE 50050 80 443
+EXPOSE 80 443
 ENTRYPOINT ["/docker-entrypoint.sh"]
